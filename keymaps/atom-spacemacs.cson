@@ -1,0 +1,75 @@
+# Keybindings require three things to be fully defined: A selector that is
+# matched against the focused element, the keystroke and the command to
+# execute.
+#
+# Below is a basic keybinding which registers on all platforms by applying to
+# the root workspace element.
+
+# For more detailed documentation see
+# https://atom.io/docs/latest/behind-atom-keymaps-in-depth
+
+'background-tips, .tree-view, atom-text-editor.vim-mode-plus:not(.insert-mode)':
+  # core commands
+  'space q q': 'application:quit'
+  'space a k': 'application:open-your-keymap'
+  'space a r': 'window:reload'
+  'space a s': 'application:show-settings'
+  'space :'  : 'command-palette:toggle'
+
+  # windows/panes commands
+  'space w 0'          : 'tree-view:toggle-focus'
+  'space w 1'          : 'window:focus-pane-on-left'
+  'space w 2'          : 'window:focus-pane-on-right'
+  'space w p' : 'window:focus-previous-pane'
+  'space w n' : 'window:focus-next-pane'
+  'space w h'  : 'window:focus-pane-on-left'
+  'space w j'  : 'window:focus-pane-below'
+  'space w k'  : 'window:focus-pane-above'
+  'space w l'  : 'window:focus-pane-on-right'
+  'space w b h'  : 'pane:split-left-and-move-active-item'
+  'space w b j'  : 'pane:split-down-and-move-active-item'
+  'space w b k'  : 'pane:split-up-and-move-active-item'
+  'space w b l'  : 'pane:split-right-and-move-active-item'
+  'space w -'  : 'pane:split-down-and-copy-active-item'            
+  'space w /'  : 'pane:split-right-and-copy-active-item'
+  'space w c'  : 'pane:close'                      
+
+  # file commands
+  'space f t'  : 'tree-view:reveal-active-file'
+  'space f s'  : 'core:save'                       
+  'space f c'  : 'core:close'                      
+  'space f n'  : 'application:new-file'                      
+  'space f u'  : 'pane:reopen-closed-item' 
+
+  # buffer commands
+  'space b p'  : 'pane:show-next-item'            
+  'space b n'  : 'pane:show-next-item'            
+  'space b h'  : 'window:move-active-item-to-pane-on-left'           
+  'space b j'  : 'window:move-active-item-to-pane-below'           
+  'space b k'  : 'window:move-active-item-to-pane-above'           
+  'space b l'  : 'window:move-active-item-to-pane-on-right'            
+  'space b c'  : 'core:close'         
+  'space b /' : 'application:new-file'
+  'space b o' : 'application:open-file'
+
+  # comment/compile commands
+  'space c l': 'editor:toggle-line-comments'
+  
+  # tree
+  'space t f': 'tree-view:add-file'
+  'space t d': 'tree-view:add-folder'
+
+# Dart only.
+"atom-text-editor[data-grammar='source dart'].vim-mode-plus:not(.insert-mode)":
+  'space m c': 'dartlang:run-application'
+  'space m a': 'dartlang:run-application'
+  'space m t': 'dartlang:run-tests'
+  'space m =': 'dartlang:dart-format'
+  'space m f t': 'dartlang:find-type'
+  'space m f r': 'dartlang:find-references'
+  'space m r i': 'dartlang:refactor-inline-local'
+  'space m r r': 'dartlang:refactor-extract-local'
+  'space m r r': 'dartlang:refactor-rename'
+  'space m g g': 'dartlang:jump-to-declaration'
+
+

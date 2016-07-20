@@ -1,0 +1,16 @@
+{
+    "name": "atom-spacemacs",
+    "main": "./lib/atom-spacemacs",
+    "version": "0.0.1",
+    "description": "Aiming to add spacemacs style keybindings and editing to Atom in a lightweight fashion.",
+    "keywords": [
+        "spacemacs",
+        "evil-mode",
+        "vim"
+    ],
+    "repository": "https://github.com/Newres/atom-spacemacs",
+    "license": "MIT",
+    "engines": {
+        "atom": ">=1.0.0 <2.0.0"
+    }
+}
